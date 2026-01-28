@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Addition of Two Numbers</title>
+    <title>Addition</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -15,34 +15,27 @@
         }
 
         .container {
-            background: #ffffff;
+            background: #fff;
             padding: 30px;
             border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             text-align: center;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
+            width: 300px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
         input {
             width: 90%;
             padding: 10px;
             margin: 8px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
             font-size: 16px;
         }
 
         button {
-            margin-top: 15px;
             padding: 10px 20px;
+            margin-top: 10px;
             font-size: 16px;
             background: #4facfe;
-            color: #fff;
+            color: white;
             border: none;
             border-radius: 20px;
             cursor: pointer;
@@ -55,31 +48,36 @@
         .result {
             margin-top: 15px;
             font-size: 18px;
-            color: #333;
+        }
+
+        a {
+            display: block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #4facfe;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2>Addition of Two Numbers</h2>
+        <h2>Addition</h2>
 
-        <input type="number" id="num1" placeholder="Enter first number">
-        <input type="number" id="num2" placeholder="Enter second number">
+        <input type="number" id="n1" placeholder="First number">
+        <input type="number" id="n2" placeholder="Second number">
 
-        <button onclick="addNumbers()">Add</button>
+        <button onclick="add()">Add</button>
 
-        <div class="result" id="result"></div>
+        <div class="result" id="res"></div>
+
+        <a href="welcome.html">← Back to Welcome</a>
     </div>
 
     <script>
-        function addNumbers() {
-            const n1 = Number(document.getElementById("num1").value);
-            const n2 = Number(document.getElementById("num2").value);
-            const sum = n1 + n2;
-
-            document.getElementById("result").innerText =
-                "Result: " + sum;
+        function add() {
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            document.getElementById("res").innerText = "Result: " + (a + b);
         }
     </script>
 
